@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfdfc;
+  --foreground: #12312a;
+
+  /* Paleta "calma y confianza": verde salvia + azul suave */
+  --color-brand-50: #f0f9f5;
+  --color-brand-100: #dbf0e4;
+  --color-brand-200: #b8e0c9;
+  --color-brand-300: #8bcaa9;
+  --color-brand-400: #5eae87;
+  --color-brand-500: #3d8f6a;
+  --color-brand-600: #2c7355;
+  --color-brand-700: #245c46;
+  --color-brand-800: #1f4a39;
+  --color-brand-900: #123028;
+
+  --color-accent-50: #eef6fb;
+  --color-accent-100: #d9ecf5;
+  --color-accent-200: #b3d9eb;
+  --color-accent-300: #83bfdb;
+  --color-accent-400: #559fc2;
+  --color-accent-500: #3980a6;
+  --color-accent-600: #2c6488;
+
+  --color-sand-50: #fdfbf7;
+  --color-sand-100: #f7f1e6;
+  --color-sand-200: #ede1cb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-50: var(--color-brand-50);
+  --color-brand-100: var(--color-brand-100);
+  --color-brand-200: var(--color-brand-200);
+  --color-brand-300: var(--color-brand-300);
+  --color-brand-400: var(--color-brand-400);
+  --color-brand-500: var(--color-brand-500);
+  --color-brand-600: var(--color-brand-600);
+  --color-brand-700: var(--color-brand-700);
+  --color-brand-800: var(--color-brand-800);
+  --color-brand-900: var(--color-brand-900);
+  --color-accent-50: var(--color-accent-50);
+  --color-accent-100: var(--color-accent-100);
+  --color-accent-200: var(--color-accent-200);
+  --color-accent-300: var(--color-accent-300);
+  --color-accent-400: var(--color-accent-400);
+  --color-accent-500: var(--color-accent-500);
+  --color-accent-600: var(--color-accent-600);
+  --color-sand-50: var(--color-sand-50);
+  --color-sand-100: var(--color-sand-100);
+  --color-sand-200: var(--color-sand-200);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0d1512;
+    --foreground: #eef6f1;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utilidad para animaciones GSAP: estado inicial oculto antes de que el script las anime */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(24px);
+}
